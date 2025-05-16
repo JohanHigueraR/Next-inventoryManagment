@@ -1,0 +1,98 @@
+@import "tailwindcss";
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root,
+.app {
+  height: 100%;
+  width: 100%;
+
+  /* El color de fondo y texto ahora se controlan por CSS custom properties para dark mode */
+  background-color: var(--color-bg);
+  color: var(--color-text);
+}
+
+@layer base {
+  :root {
+    --color-bg: #f9fafb; /* gray.50 */
+    --color-card-bg: #f3f4f6; /* gray.50 */
+    --color-text: #18181b; /* gray.900 */
+    --color-primary: #2563eb; /* blue.600 */
+    --color-secondary: #f59e42; /* orange.400 */
+    --color-gray-50: #f9fafb;
+    --color-gray-100: #f3f4f6;
+    --color-gray-200: #e5e7eb;
+    --color-gray-300: #d1d5db;
+    --color-gray-400: #9ca3af;
+    --color-gray-500: #6b7280;
+    --color-gray-600: #4b5563;
+    --color-gray-700: #374151;
+    --color-gray-800: #1f2937;
+    --color-gray-900: #18181b;
+    --color-blue-50: #eff6ff;
+    --color-blue-100: #dbeafe;
+    --color-blue-200: #bfdbfe;
+    --color-blue-300: #93c5fd;
+    --color-blue-400: #60a5fa;
+    --color-blue-500: #3b82f6;
+    --color-blue-600: #2563eb;
+    --color-blue-700: #1d4ed8;
+    --color-blue-800: #1e40af;
+    --color-blue-900: #1e3a8a;
+    /* Agrega aquí más colores base si lo necesitas */
+  }
+  .dark {
+    --color-bg: #18181b; /* gray.900 */
+    --color-card-bg: #23272f; /* gray.900 */
+    --color-text: #f9fafb; /* gray.50 */
+    --color-primary: #60a5fa; /* blue.400 */
+    --color-secondary: #fbbf24; /* orange.300 */
+    --color-gray-50: #18181b;
+    --color-gray-100: #1f2937;
+    --color-gray-200: #374151;
+    --color-gray-300: #4b5563;
+    --color-gray-400: #6b7280;
+    --color-gray-500: #9ca3af;
+    --color-gray-600: #d1d5db;
+    --color-gray-700: #e5e7eb;
+    --color-gray-800: #f3f4f6;
+    --color-gray-900: #f9fafb;
+    --color-blue-50: #1e3a8a;
+    --color-blue-100: #1e40af;
+    --color-blue-200: #1d4ed8;
+    --color-blue-300: #2563eb;
+    --color-blue-400: #3b82f6;
+    --color-blue-500: #60a5fa;
+    --color-blue-600: #93c5fd;
+    --color-blue-700: #bfdbfe;
+    --color-blue-800: #dbeafe;
+    --color-blue-900: #eff6ff;
+    /* Invierte los tonos para dark mode */
+  }
+  body {
+    background-color: var(--color-bg);
+    color: var(--color-text);
+  }
+}
+
+@media (min-width: 768px) {
+  .custom-grids-rows {
+    grid-template-rows: repeat(8, 20vh);
+  }
+}
+
+@media (min-width: 1280px) {
+  .custom-grids-rows {
+    grid-template-rows: repeat(8, 7.5vh);
+  }
+}
+
+/* Utiliza las variables en tus componentes para fondo y texto, por ejemplo:
+   className="bg-[var(--color-bg)] text-[var(--color-text)]"
+   Así todo se adapta automáticamente al modo oscuro. */
