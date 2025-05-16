@@ -66,12 +66,12 @@ const Sidebar = () => {
 
   const sidebarClassNames = `fixed flex flex-col ${
     isSideCollapsed ? "w-0 md:w-16" : "w-72 md:w-64"
-  } bg-[var(--color-bg)] transition-all duration-300 overflow-hidden h-full shadow-md z-40`;
+  } bg-[var(--color-card-bg)]  transition-all duration-300 overflow-hidden h-full shadow-md z-40`;
   return (
     <div className={sidebarClassNames}>
       {/* TOP TITLE */}
       <div
-        className={`flex gap-3 justify-between md:justify-normal items-center pt-8 ${
+        className={`  flex gap-3 justify-between md:justify-normal items-center pt-8 ${
           isSideCollapsed ? "px-5" : "px-8"
         } `}
       >

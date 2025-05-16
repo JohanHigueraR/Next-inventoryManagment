@@ -44,9 +44,9 @@ export interface ExpenseByCategorySummary {
 export interface DashBoardMetrics {
   popularProducts: Product[];
   salesSummary: SalesSummary[];
-  purchasesSummary: PurchaseSummary[];
-  expensesSummary: ExpenseSummary[];
-  expensebyCategory: ExpenseByCategorySummary[];
+  purchaseSummary: PurchaseSummary[];
+  expenseSummary: ExpenseSummary[];
+  expenseByCategory: ExpenseByCategorySummary[];
 }
 
 export const api = createApi({

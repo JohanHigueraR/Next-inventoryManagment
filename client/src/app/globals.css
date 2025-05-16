@@ -82,15 +82,19 @@ body,
 }
 
 @media (min-width: 768px) {
-  .custom-grids-rows {
+  .custom-grid-rows {
     grid-template-rows: repeat(8, 20vh);
   }
 }
 
 @media (min-width: 1280px) {
-  .custom-grids-rows {
+  .custom-grid-rows {
     grid-template-rows: repeat(8, 7.5vh);
   }
+}
+select, option {
+  background-color: var(--color-card-bg);
+  color: var(--color-text);
 }
 
 /* Utiliza las variables en tus componentes para fondo y texto, por ejemplo:
